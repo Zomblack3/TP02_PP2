@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CraneHookMovement : MonoBehaviour
 {
-    const float maxDistance = 8.0f;
+    const float maxDistance = 10.0f;
 
     [SerializeField] private Transform player;
 
