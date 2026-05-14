@@ -4,7 +4,7 @@ public class CraneHookMovement : MonoBehaviour
 {
     const float maxDistance = 10.0f;
 
-    [SerializeField] private Transform player;
+    [SerializeField] private Transform hook;
 
     [SerializeField] private float baseSpeed = 5.0f;
     [SerializeField] private float speed = 5.0f;
@@ -15,18 +15,18 @@ public class CraneHookMovement : MonoBehaviour
 
     private void Start()
     {
-        startingPos = player.position;
+        startingPos = hook.position;
     }
 
     private void Update()
     {
-        if (player.position.x > startingPos.x + maxDistance && isGoingRight)
+        if (hook.position.x > startingPos.x + maxDistance && isGoingRight)
         {
             speed *= -1.0f;
 
             isGoingRight = false;
         }
-        else if (player.position.x < startingPos.x - maxDistance && !isGoingRight)
+        else if (hook.position.x < startingPos.x - maxDistance && !isGoingRight)
         {
             speed = baseSpeed;
 
