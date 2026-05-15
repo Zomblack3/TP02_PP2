@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))]
@@ -9,7 +8,9 @@ public class Throwable : MonoBehaviour
     private Rigidbody rigidbody;
     private BoxCollider collider;
 
-    public bool wasThrowed = false;
+    public static int towerSize = 0;
+
+    public bool hasCollide = false;
 
     private void Awake()
     {
@@ -17,18 +18,18 @@ public class Throwable : MonoBehaviour
         collider = GetComponent<BoxCollider>();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        rigidbody.isKinematic = true;
+        
+        if (!hasCollide)
+            towerSize++;
+
+        hasCollide = true;
+    }
+
     public float GetColliderHeight()
     {
         return collider.bounds.extents.y;
     }
-
-
-
-    //public void Logic(bool throwIt)
-    //{
-    //    wasThrowed = throwIt;
-
-    //    if (wasThrowed)
-    //        rigidbody.useGravity = true;
-    //}
 }
