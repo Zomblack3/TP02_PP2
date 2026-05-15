@@ -1,5 +1,6 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+version https://git-lfs.github.com/spec/v1
+oid sha256:04e4c7089c870ec9df4a97f3b87d8d8e355935095b345de76004db0bc2ef219b
+size 140
 .cs !text !filter !merge !diff
 .cpp !text !filter !merge !diff
 .js !text !filter !merge !diff
