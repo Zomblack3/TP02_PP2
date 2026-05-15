@@ -1,17 +1,3 @@
-using UnityEngine;
-using TMPro;
-
-public class HudSetting : MonoBehaviour
-{
-    [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private TMP_Text towerSizeText;
-
-    [SerializeField] private PlayerInput player;
-
-    // Update is called once per frame
-    void Update()
-    {
-        scoreText.text = "Puntaje: " + player.score;
-        towerSizeText.text = "Altura: " + Throwable.towerSize;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a35afd31289612660d1be5385f1d37861bb80335c0c97fc057e734171cf7f9e8
+size 556
