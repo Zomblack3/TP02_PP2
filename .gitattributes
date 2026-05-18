@@ -7,3 +7,14 @@ size 140
 .json !text !filter !merge !diff
 .txt !text !filter !merge !diff
 .md !text !filter !merge !diff
+*.cs !text !filter !merge !diff
+*.cpp !text !filter !merge !diff
+*.js !text !filter !merge !diff
+*.json !text !filter !merge !diff
+*.txt !text !filter !merge !diff
+*.md !text !filter !merge !diff
+*.meta !text !filter !merge !diff
+*.prefab !text !filter !merge !diff
+*.unity !text !filter !merge !diff
+*.asset !text !filter !merge !diff
+*.mixer !text !filter !merge !diff
